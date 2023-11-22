@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NABIEL KEREN STORE</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your external CSS file -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+  <!--navbar-->
+  <nav class="bg-orange-700 p-3 w-full flex justify-between text-white">
+    <div>
+      <a href="https://youtu.be/xvFZjo5PgG0" target="_blank" rel="noopener noreferrer">Watch this</a>
+    </div>
+    <div>
+      <a href="#" id="cartLink"> <span class="cart_count"></span>Keranjang</a>
+    </div>
+  </nav>
+
+  <!--isi konten-->
+  <div class="grid grid-cols-3 gap-20 m-10 div-produk"></div>
+
+  <!-- modal popup -->
+  <div id="myModal" class="modal hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="modal-content bg-white p-8 rounded shadow-md">
+      <span id="closeModal" class="close absolute top-2 right-2 text-2xl cursor-pointer">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <!-- popup keranjang -->
+  <div id="cartPopup" class="cart-popup hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md">
+      <span id="closeCartPopup" class="close absolute top-2 right-2 text-2xl cursor-pointer">&times;</span>
+      <h2 class="text-2xl font-semibold mb-4">Item di Keranjang</h2>
+      <ul id="cartItemsList"></ul>
+      <button id="sortCart" class="bg-blue-500 text-white px-3 py-1 rounded mt-4">Urutkan</button>
+    </div>
+  </div>
+
+  <!-- tampilan cart -->
+  <div id="cartView" class="cart-popup hidden fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="bg-white p-10 rounded shadow-md">
+      <span id="closeCartView" class="close absolute top-2 right-2 text-2xl cursor-pointer">&times;</span>
+      <h2 class="text-2xl font-semibold mb-4">Keranjang</h2>
+      <ul id="cartItemsView">
+        <!-- Item dari keranjang akan ditambahkan di sini oleh JavaScript -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
